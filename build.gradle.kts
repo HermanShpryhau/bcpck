@@ -31,6 +31,10 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("org.litote.kmongo:kmongo:4.6.0")
+    implementation("org.litote.kmongo:kmongo-serialization:4.6.0")
+    implementation("org.litote.kmongo:kmongo-id-serialization:4.6.0")
+
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
