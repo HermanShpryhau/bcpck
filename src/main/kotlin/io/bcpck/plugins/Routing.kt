@@ -1,16 +1,16 @@
 package io.bcpck.plugins
 
+import io.bcpck.routes.backpackRoutes
+import io.bcpck.routes.itemRoutes
+import io.bcpck.routes.userRoutes
 import io.ktor.server.routing.*
-import io.ktor.http.*
 import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.request.*
 
 fun Application.configureRouting() {
 
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
+        backpackRoutes()
+        itemRoutes()
+        userRoutes()
     }
 }
