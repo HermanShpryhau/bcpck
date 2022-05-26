@@ -11,6 +11,11 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Delete)
         allowMethod(HttpMethod.Patch)
         allowHeader(HttpHeaders.Authorization)
-        anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
+        allowHeader(HttpHeaders.ContentType)
+        allowHeader(HttpHeaders.AccessControlAllowOrigin)
+        allowCredentials = true
+        allowNonSimpleContentTypes = true
+        allowSameOrigin = true
+        allowHost("localhost:3000")
     }
 }
